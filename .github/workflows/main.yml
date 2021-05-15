@@ -13,11 +13,12 @@ jobs:
         with:
           node-version: |
                   >=14.x
-      - name: Build for production
+      - name: Build 🛠️
         run: |
           npm install
           npm install -g @angular/cli@latest
           ng build --configuration production
+          ls
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@4.1.3
         with:
