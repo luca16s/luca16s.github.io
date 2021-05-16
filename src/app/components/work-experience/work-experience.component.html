@@ -8,14 +8,18 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <!-- Content -->
-    <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="workList">
+    <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+    class="workList"
+    *ngFor="let experience of WorkExperienceList">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>
             <mat-icon>
               date_range
             </mat-icon>
-            06/2018 - Present
+            {{ experience.date_range }}
           </span>
         </mat-panel-title>
         <mat-panel-description>
@@ -23,14 +27,18 @@
             <mat-icon class="material-icons-outlined">
               location_on
             </mat-icon>
-            Rio de Janeiro, Rio de Janeiro - Brazil
+            {{ experience.location }}
           </span>
         </mat-panel-description>
       </mat-expansion-panel-header>
+      <h2>
+        {{ experience.position }} -
+        <a href="{{ experience.employee_website }}" target="_blank">
+          {{ experience.employee_name }}
+        </a>
+      </h2>
       <p>
-        Developing .NET Framework applications with WinForms.
-        I've started using Subversion as the main code versioning tool, and later helped migrate codebase to git.
-        More precisely, I act as a developer in a decision support system for the Oil and Gas industry, where the main focus is to optimize the allocation of Offshore Drilling Rigs and PLSV (Pipe-laying ships) to deep water exploration camps.
+        {{ experience.job_description }}
       </p>
     </mat-expansion-panel>
   </mat-expansion-panel>
