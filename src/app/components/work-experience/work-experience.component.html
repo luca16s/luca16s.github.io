@@ -1,12 +1,14 @@
-<div>
+<div class="container">
   <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
     <mat-expansion-panel-header>
       <mat-panel-title>
-        Work Experience
+        <h1>
+          Work Experience
+        </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
     <!-- Content -->
-    <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false" class="workList">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>

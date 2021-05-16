@@ -1,15 +1,13 @@
-div {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
+.container {
+  height:65vh;
 }
 
 mat-expansion-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background-color: #1A1A1A;
+}
+
+.workList {
+  margin-top: 10px;
 }
 
 span {
@@ -21,4 +19,14 @@ span {
 
 mat-icon {
   padding-right: 5px;
+}
+
+h1 {
+  text-decoration: solid;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 15px;
+  margin-left: 74px;
+  color: #27B5D2;
 }
