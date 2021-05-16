@@ -1,0 +1,35 @@
+<div>
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Work Experience
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <!-- Content -->
+    <mat-expansion-panel  (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>
+            <mat-icon>
+              date_range
+            </mat-icon>
+            06/2018 - Present
+          </span>
+        </mat-panel-title>
+        <mat-panel-description>
+          <span>
+            <mat-icon class="material-icons-outlined">
+              location_on
+            </mat-icon>
+            Rio de Janeiro, Rio de Janeiro - Brazil
+          </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>
+        Developing .NET Framework applications with WinForms.
+        I've started using Subversion as the main code versioning tool, and later helped migrate codebase to git.
+        More precisely, I act as a developer in a decision support system for the Oil and Gas industry, where the main focus is to optimize the allocation of Offshore Drilling Rigs and PLSV (Pipe-laying ships) to deep water exploration camps.
+      </p>
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</div>

@@ -1,10 +1,18 @@
 .container {
-  background-color: #FFFFFF;
   width: 1468px;
   height: 2077px;
 }
 
 .header {
   width: 100%;
-  border-bottom: 10px solid #F8699B;
+  background-color: #FFFFFF;
+  border-bottom: 10px solid #4BB5D4;
+}
+
+.content {
+  background-color: #1A1A1A;
+}
+
+.profile {
+  height: 300px;
 }
