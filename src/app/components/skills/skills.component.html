@@ -1,0 +1,49 @@
+<div class="container">
+  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1>
+          Skills
+        </h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+    class="skillList"
+    *ngFor="let experience of SkillList">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>
+            <mat-icon>
+              date_range
+            </mat-icon>
+            {{ experience }}
+          </span>
+        </mat-panel-title>
+        <mat-panel-description>
+          <span>
+            <mat-icon class="material-icons-outlined">
+              location_on
+            </mat-icon>
+            {{ experience }}
+          </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <div *ngIf="true; then withWebsite else withoutWebsite"></div>
+      <ng-template #withWebsite>
+        <h2>
+          {{ experience }} - <a href="{{ experience }}" target="_blank" >
+            {{ experience }}
+          </a>
+        </h2>
+      </ng-template>
+      <ng-template #withoutWebsite>
+        <h2>
+          {{ experience }} - {{ experience }}
+        </h2>
+      </ng-template>
+      {{ experience }}
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</div>

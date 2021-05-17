@@ -1,39 +1,35 @@
 import { Component, OnInit } from '@angular/core';
 
-export interface Languages {
+export interface Skill {
   name: string;
-  level: string;
   progress: number;
 }
 
 @Component({
-  selector: 'app-langs',
-  templateUrl: './langs.component.html',
-  styleUrls: ['./langs.component.scss']
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.scss']
 })
-export class LangsComponent implements OnInit {
+export class SkillsComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
   }
+  panelOpenState = false;
 
-  LangList: Languages[] = [
+  SkillList: Skill[] = [
     {
       name: 'Portuguese',
-      level: 'Native',
       progress: 100,
     },
     {
       name: 'English',
-      level: 'B1',
       progress: 70,
     },
     {
       name: 'French',
-      level: 'A1',
       progress: 10,
     }
   ]
-
 }

@@ -1,31 +1,23 @@
-<div class="container">
+<div>
   <div class="header">
-    <mat-grid-list cols="1" rowHeight="400px">
-      <mat-grid-tile>
-        <app-header></app-header>
-      </mat-grid-tile>
-    </mat-grid-list>
+    <app-header></app-header>
   </div>
   <div class="content">
-    <mat-grid-list cols="2" rowHeight="100px">
-      <mat-grid-tile rowspan="3">
+    <div class="contentLeft">
+      <div class="components">
         <app-profile></app-profile>
-      </mat-grid-tile>
-      <mat-grid-tile rowspan="4" >
-        3
-      </mat-grid-tile>
-      <mat-grid-tile rowspan="6">
+      </div>
+      <div class="components">
         <app-work-experience></app-work-experience>
-      </mat-grid-tile>
-      <mat-grid-tile rowspan="4">
+      </div>
+    </div>
+    <div class="contentRight">
+      <div class="components">
+        <app-skills></app-skills>
+      </div>
+      <div class="components">
         <app-langs></app-langs>
-      </mat-grid-tile>
-      <mat-grid-tile rowspan="5">
-        6
-      </mat-grid-tile>
-      <mat-grid-tile rowspan="4">
-        7
-      </mat-grid-tile>
-    </mat-grid-list>
+      </div>
+    </div>
   </div>
 </div>

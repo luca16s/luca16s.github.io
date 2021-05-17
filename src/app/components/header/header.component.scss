@@ -9,13 +9,14 @@ span {
 
 mat-icon {
   color: #000000;
-  padding-right: 2px;
-
+  padding-right: 4px;
 }
 
 .baseContainer {
+  width: inherit;
   display: flex;
-  justify-content: right;
+  justify-content: center;
+  padding-top: 8vh;
 }
 
 h1 {
@@ -30,7 +31,7 @@ h1 {
   align-items: flex-start;
   justify-content: center;
   flex-direction: column;
-  margin-right: 800px;
+  margin-right: 80vh;
 }
 
 .fotoContainer {
@@ -42,7 +43,7 @@ h1 {
 #foto {
   width: 223px;
   height: 223px;
-  border-radius: 55%;
+  border-radius: 50%;
   background:url('../../../assets/img/me.jpg') center top;
   background-size: cover;
 }
