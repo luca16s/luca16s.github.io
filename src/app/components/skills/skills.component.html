@@ -1,5 +1,7 @@
 <div class="container">
-  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel
+   (opened)="panelOpenState"
+   (closed)="panelOpenState">
     <mat-expansion-panel-header>
       <mat-panel-title>
         <h1>
@@ -8,42 +10,33 @@
       </mat-panel-title>
     </mat-expansion-panel-header>
     <mat-expansion-panel
-    (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false"
+    (opened)="panelOpenState"
+    (closed)="panelOpenState"
     class="skillList"
-    *ngFor="let experience of SkillList">
+    *ngFor="let category of SkillList">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>
-            <mat-icon>
-              date_range
-            </mat-icon>
-            {{ experience }}
+            {{ category.category }}
           </span>
         </mat-panel-title>
-        <mat-panel-description>
-          <span>
-            <mat-icon class="material-icons-outlined">
-              location_on
-            </mat-icon>
-            {{ experience }}
-          </span>
-        </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngIf="true; then withWebsite else withoutWebsite"></div>
-      <ng-template #withWebsite>
-        <h2>
-          {{ experience }} - <a href="{{ experience }}" target="_blank" >
-            {{ experience }}
-          </a>
-        </h2>
-      </ng-template>
-      <ng-template #withoutWebsite>
-        <h2>
-          {{ experience }} - {{ experience }}
-        </h2>
-      </ng-template>
-      {{ experience }}
+      <mat-list>
+        <mat-list-item *ngFor="let skill of category.skills">
+          <div class="left">
+            <span>{{ skill.name }}</span>
+          </div>
+          <div>
+            <mat-slider
+            class="slider-lang"
+            [disabled]="true"
+            [max]="100"
+            [value]="skill.progress"
+            aria-labelledby="lang.name">
+            </mat-slider>
+          </div>
+        </mat-list-item>
+      </mat-list>
     </mat-expansion-panel>
   </mat-expansion-panel>
 </div>
