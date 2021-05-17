@@ -7,7 +7,6 @@
         </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <!-- Content -->
     <mat-expansion-panel
     (opened)="panelOpenState = true"
     (closed)="panelOpenState = false"
@@ -31,15 +30,20 @@
           </span>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <h2>
-        {{ experience.position }} -
-        <a href="{{ experience.employee_website }}" target="_blank">
-          {{ experience.employee_name }}
-        </a>
-      </h2>
-      <p>
-        {{ experience.job_description }}
-      </p>
+      <div *ngIf="experience.employee_website.length > 0; then withWebsite else withoutWebsite"></div>
+      <ng-template #withWebsite>
+        <h2>
+          {{ experience.position }} - <a href="{{ experience.employee_website }}" target="_blank" >
+            {{ experience.employee_name }}
+          </a>
+        </h2>
+      </ng-template>
+      <ng-template #withoutWebsite>
+        <h2>
+          {{ experience.position }} - {{ experience.employee_name }}
+        </h2>
+      </ng-template>
+      {{ experience.job_description }}
     </mat-expansion-panel>
   </mat-expansion-panel>
 </div>
