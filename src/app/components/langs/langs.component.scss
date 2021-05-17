@@ -1,12 +1,18 @@
-div {
-  height:40vh;
+.container {
   display: flex;
+  justify-content: space-around;
+  flex-direction: column;
 }
 
 .content {
   display: flex;
-  justify-content: inherit;
+  justify-content: center;
   align-items: flex-start;
+  flex-direction: row;
+}
+
+.title {
+  margin-bottom: 50px;
 }
 
 h1 {
@@ -15,4 +21,11 @@ h1 {
   font-weight: bold;
   font-size: 30px;
   color: #27B5D2;
+}
+
+::ng-deep .mat-accent .mat-slider-thumb {
+  background-color: #27B5D2;
+}
+::ng-deep .mat-accent .mat-slider-track-fill {
+  background-color: #27B5D2;
 }

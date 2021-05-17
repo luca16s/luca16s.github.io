@@ -1,10 +1,26 @@
-<div>
-  <div class="content">
+<div class="container">
+  <div class="title">
     <h1>
       Languages
     </h1>
-    <p>
-      ffffff
-    </p>
   </div>
+  <mat-list class="content">
+    <mat-list-item *ngFor="let lang of Langs">
+      <div>
+        <h2>
+          {{ lang.name }}
+        </h2>
+        <h3>
+          {{ lang.level }}
+        </h3>
+        <mat-slider
+        class="slider-lang"
+        [disabled]="true"
+        [max]="100"
+        [value]="lang.progress"
+        aria-labelledby="lang.name">
+        </mat-slider>
+      </div>
+    </mat-list-item>
+  </mat-list>
 </div>

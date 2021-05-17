@@ -17,6 +17,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { MatButtonModule } from '@angular/material/button';
     MatListModule,
     MatExpansionModule,
     MatButtonModule,
+    MatSliderModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
