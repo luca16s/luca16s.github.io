@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { LangsComponent } from './components/langs/langs.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,7 +23,8 @@ import { MatButtonModule } from '@angular/material/button';
     AppComponent,
       HeaderComponent,
       WorkExperienceComponent,
-      ProfileComponent
+      ProfileComponent,
+      LangsComponent
    ],
   imports: [
     BrowserModule,
