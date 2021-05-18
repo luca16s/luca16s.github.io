@@ -9,6 +9,7 @@ import { WorkExperienceComponent } from './components/work-experience/work-exper
 import { ProfileComponent } from './components/profile/profile.component';
 import { LangsComponent } from './components/langs/langs.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { EducationComponent } from './components/education/education.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
@@ -22,11 +23,12 @@ import { MatSliderModule } from '@angular/material/slider';
 @NgModule({
   declarations: [
     AppComponent,
-      HeaderComponent,
-      WorkExperienceComponent,
-      ProfileComponent,
-      LangsComponent,
-      SkillsComponent
+    HeaderComponent,
+    WorkExperienceComponent,
+    ProfileComponent,
+    LangsComponent,
+    SkillsComponent,
+    EducationComponent
    ],
   imports: [
     BrowserModule,

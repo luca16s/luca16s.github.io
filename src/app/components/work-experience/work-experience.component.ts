@@ -22,7 +22,7 @@ export class WorkExperienceComponent implements OnInit {
   }
   panelOpenState = false;
 
-  WorkExperienceList: WorkExperienceModel[] = [
+  workExperienceList: WorkExperienceModel[] = [
     {
       date_range: 'From 06/2018 - Present',
       location: 'Rio de Janeiro - Brazil',

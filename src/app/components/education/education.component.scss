@@ -1,0 +1,28 @@
+mat-expansion-panel {
+  background-color: #1A1A1A;
+}
+
+span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+mat-icon {
+  padding-right: 5px;
+}
+
+h1 {
+  text-decoration: solid;
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 1.6vh;
+  color: #27B5D2;
+}
+
+a {
+  color: inherit;
+}

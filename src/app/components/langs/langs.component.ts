@@ -18,7 +18,7 @@ export class LangsComponent implements OnInit {
   ngOnInit() {
   }
 
-  LangList: Languages[] = [
+  langList: Languages[] = [
     {
       name: 'Portuguese',
       level: 'Native',

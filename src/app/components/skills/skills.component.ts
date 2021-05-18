@@ -23,7 +23,7 @@ export class SkillsComponent implements OnInit {
   }
   panelOpenState = true;
 
-  SkillList: SkillsList[] = [
+  skillList: SkillsList[] = [
     {
       category: 'Programing Languages',
       skills: [] = [
@@ -42,6 +42,10 @@ export class SkillsComponent implements OnInit {
         {
           name: 'ABAP',
           progress: 50,
+        },
+        {
+          name: 'Lua',
+          progress: 40,
         },
         {
           name: 'Javascript/Typescript',

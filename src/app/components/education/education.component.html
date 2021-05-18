@@ -3,7 +3,7 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <h1>
-          Work Experience
+          Education
         </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
@@ -11,14 +11,14 @@
     (opened)="panelOpenState = true"
     (closed)="panelOpenState = false"
     class="workList"
-    *ngFor="let experience of workExperienceList">
+    *ngFor="let education of educationList">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>
             <mat-icon>
               date_range
             </mat-icon>
-            {{ experience.date_range }}
+            {{ education.date_range }}
           </span>
         </mat-panel-title>
         <mat-panel-description>
@@ -26,24 +26,24 @@
             <mat-icon class="material-icons-outlined">
               location_on
             </mat-icon>
-            {{ experience.location }}
+            {{ education.location }}
           </span>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngIf="experience.employee_website.length > 0; then withWebsite else withoutWebsite"></div>
+      <div *ngIf="education.college_website.length > 0; then withWebsite else withoutWebsite"></div>
       <ng-template #withWebsite>
         <h2>
-          {{ experience.position }} - <a href="{{ experience.employee_website }}" target="_blank" >
-            {{ experience.employee_name }}
+          {{ education.type }} - <a href="{{ education.college_website }}" target="_blank" >
+            {{ education.collegeName }}
           </a>
         </h2>
       </ng-template>
       <ng-template #withoutWebsite>
         <h2>
-          {{ experience.position }} - {{ experience.employee_name }}
+          {{ education.type }} - {{ education.college_website }}
         </h2>
       </ng-template>
-      {{ experience.job_description }}
+      {{ education.description }}
     </mat-expansion-panel>
   </mat-expansion-panel>
 </div>
