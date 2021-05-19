@@ -89,6 +89,10 @@ export class SkillsComponent implements OnInit {
           name: 'MongoDB',
           progress: 40,
         },
+        {
+          name: 'MySql',
+          progress: 40,
+        }
       ]
     },
   ]

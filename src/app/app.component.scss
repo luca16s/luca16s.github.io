@@ -10,10 +10,10 @@
   justify-content: center;
   flex-direction: row;
   height: auto;
+  padding-bottom: 5rem;
 }
 
 .contentLeft, .contentRight {
-  width: 50%;
   display: flex;
   flex-direction: column;
 }
