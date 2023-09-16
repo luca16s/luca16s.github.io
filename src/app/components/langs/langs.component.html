@@ -13,12 +13,8 @@
         <h3>
           {{ lang.level }}
         </h3>
-        <mat-slider
-        class="slider-lang"
-        [disabled]="true"
-        [max]="100"
-        [value]="lang.progress"
-        aria-labelledby="lang.name">
+        <mat-slider class="slider-lang" [disabled]="true" [max]="100" aria-labelledby="lang.name">
+          <input matSliderThumb [(ngModel)]="lang.progress" #slider>
         </mat-slider>
       </div>
     </mat-list-item>

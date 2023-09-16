@@ -31,8 +31,8 @@
             class="slider-lang"
             [disabled]="true"
             [max]="100"
-            [value]="skill.progress"
             aria-labelledby="lang.name">
+              <input matSliderThumb [(ngModel)]="skill.progress" #slider>
             </mat-slider>
           </div>
         </mat-list-item>
