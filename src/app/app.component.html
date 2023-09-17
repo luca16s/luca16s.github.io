@@ -1,29 +1,37 @@
-<div>
-  <div class="header">
-    <app-header></app-header>
+<div [ngClass]="{'is-phone-portrait': isPhonePortrait, 'is-web-portrait': !isPhonePortrait}" class="main-container">
+  <div class="space">
+
   </div>
-  <div class="content">
-    <div class="contentLeft">
-      <div class="components">
-        <app-profile></app-profile>
+  <div class="center">
+    <div class="header">
+      <app-header [personal]="(profile$ | async)!.personal"></app-header>
+    </div>
+    <div class="content">
+      <div class="content-left">
+        <div class="components">
+          <app-profile></app-profile>
+        </div>
+        <div class="components">
+          <app-work-experience></app-work-experience>
+        </div>
+        <div class="components">
+          <app-education></app-education>
+        </div>
       </div>
-      <div class="components">
-        <app-work-experience></app-work-experience>
-      </div>
-      <div class="components">
-        <app-education></app-education>
+      <div class="content-right">
+        <div class="components">
+          <app-skills></app-skills>
+        </div>
+        <div class="components">
+          <app-langs></app-langs>
+        </div>
+        <div class="components">
+          <app-social></app-social>
+        </div>
       </div>
     </div>
-    <div class="contentRight">
-      <div class="components">
-        <app-skills></app-skills>
-      </div>
-      <div class="components">
-        <app-langs></app-langs>
-      </div>
-      <div class="components">
-        <app-social></app-social>
-      </div>
-    </div>
+  </div>
+  <div class="space">
+
   </div>
 </div>

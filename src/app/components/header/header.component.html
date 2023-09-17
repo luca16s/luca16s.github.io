@@ -1,36 +1,42 @@
-<div class="baseContainer">
-  <div class="contentContainer">
-    <h1>
-      Gian Luca Figueiredo
-    </h1>
-    <br>
-    <span>
-      <mat-icon>
-        person
-      </mat-icon>
-      04/16/1995
-    </span>
-    <span>
-      <mat-icon class="material-icons-outlined">
-        location_on
-      </mat-icon>
-      Nilópolis, Rio de Janeiro - Brazil
-    </span>
-    <span>
-      <mat-icon>
-        phone_iphone_outlined
-      </mat-icon>
-      <a href="tel:+5521998887836">+55 21 99888-7836</a>
-    </span>
-    <span>
-      <mat-icon>
-        email_outline
-      </mat-icon>
-      <a href="mailto:luca.gian16@gmail.com">luca.gian16@gmail.com</a>
-    </span>
-  </div>
-  <div class="fotoContainer">
-    <div id="foto">
+<div [ngClass]="{
+  'is-phone-portrait': isPhonePortrait,
+  'is-web-portrait': !isPhonePortrait
+}">
+  <div class="main-container">
+    <div class="content-container">
+      <h1>
+        {{ personal.name }}
+      </h1>
+      <br>
+      <span>
+        <mat-icon>
+          person
+        </mat-icon>
+        {{ personal.birth | date:'dd/MM/yyyy' }}
+      </span>
+      <span>
+        <mat-icon class="material-icons-outlined">
+          location_on
+        </mat-icon>
+        {{ personal.location }}
+      </span>
+      <span>
+        <mat-icon>
+          phone_iphone_outlined
+        </mat-icon>
+        <a href="tel:+{{personal.phone}}">{{ personal.phone }}</a>
+      </span>
+      <span>
+        <mat-icon>
+          email_outline
+        </mat-icon>
+        <a href="mailto:{{personal.email}}">{{ personal.email }}</a>
+      </span>
+    </div>
+    <div class="space"></div>
+    <div class="foto-container">
+      <div id="foto">
+      </div>
     </div>
   </div>
 </div>

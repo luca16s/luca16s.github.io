@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Personal } from 'src/app/models/profile';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  styleUrls: ['./header.component.scss'],
 })
-export class HeaderComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
-  }
+export class HeaderComponent {
+  @Input() isPhonePortrait: boolean = false;
+  @Input() personal: Personal = {} as Personal;
 }

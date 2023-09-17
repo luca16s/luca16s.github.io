@@ -1,34 +1,44 @@
-.header {
-  height: 40vh;
-  background-color: #FFFFFF;
-  border-bottom: 5px solid #4BB5D4;
+.is-phone-portrait {
+  .header {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
-.content {
-  background-color: #1A1A1A;
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  height: auto;
-  padding-bottom: 5rem;
-}
+.is-web-portrait {
+  .main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 
-.contentLeft,
-.contentRight {
-  display: flex;
-  flex-direction: column;
-}
+  .center {
+    display: flex;
+    flex-direction: column;
+  }
 
-.contentLeft {
-  margin-left: 20vh;
-  margin-right: 5vh;
-}
+  .header {
+    padding: 2rem 0rem;
+    background-color: #FFFFFF;
+    border: 5px solid #1A1A1A;
+    border-bottom: 5px solid #4BB5D4;
+  }
 
-.contentRight {
-  margin-left: 5vh;
-  margin-right: 20vh;
-}
+  .content {
+    display: flex;
+    padding: 2rem 0rem;
+    flex-direction: row;
+    background-color: #1A1A1A;
+    border: 5px solid #FFFFFF;
+    justify-content: space-around;
+    border-top: 5px solid #4BB5D4;
+  }
 
-.components {
-  margin-top: 10vh;
+  .content-left,
+  .content-right {
+    display: flex;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    flex-direction: column;
+  }
 }

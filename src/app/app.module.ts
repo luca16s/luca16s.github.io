@@ -4,7 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ServiceWorkerModule } from '@angular/service-worker';
-
+import { HttpClientModule } from '@angular/common/http';
+import { LayoutModule } from '@angular/cdk/layout';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
@@ -54,6 +55,8 @@ import { SocialComponent } from './components/social/social.component';
     MatSliderModule,
     MatInputModule,
     FormsModule,
+    LayoutModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
