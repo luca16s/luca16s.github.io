@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Experience } from 'src/app/models/profile';
+import { Experience } from '@models';
 
 @Component({
   selector: 'glsf-experience',

@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from 'src/app/models/profile';
+import { Skill } from '@models';
 
 @Component({
   selector: 'glsf-skill',

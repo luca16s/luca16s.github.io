@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Language } from 'src/app/models/profile';
+import { Language } from '@models';
 
 export interface Languages {
   name: string;

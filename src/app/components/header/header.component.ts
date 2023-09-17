@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Personal } from 'src/app/models/profile';
+import { Personal } from '@models';
 
 @Component({
   selector: 'glsf-header',

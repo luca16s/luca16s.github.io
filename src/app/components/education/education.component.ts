@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Education } from 'src/app/models/profile';
+import { Education } from '@models';
 
 @Component({
   selector: 'glsf-education',
