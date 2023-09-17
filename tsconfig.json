@@ -22,7 +22,18 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@models": [
+        "src/app/models/export"
+      ],
+      "@env": [
+        "src/environments/export"
+      ],
+      "@components": [
+        "src/app/components/export"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

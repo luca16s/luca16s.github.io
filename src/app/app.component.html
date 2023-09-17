@@ -2,16 +2,16 @@
   <div class="space">
 
   </div>
-  <div class="center">
+  <div class="center" *ngIf="(profile$ | async); let profile">
     <div class="header">
-      <glsf-header [personal]="(profile$ | async)!.personal"></glsf-header>
+      <glsf-header [personal]="profile.personal"></glsf-header>
     </div>
     <div class="content">
-      <glsf-profile [personal]="(profile$ | async)!.personal"></glsf-profile>
-      <glsf-education [educations]="(profile$ | async)!.education"></glsf-education>
-      <glsf-experience [experiences]="(profile$ | async)!.experience"></glsf-experience>
-      <glsf-skill [skills]="(profile$ | async)!.skill"></glsf-skill>
-      <glsf-lang [langs]="(profile$ | async)!.language"></glsf-lang>
+      <glsf-profile [personal]="profile.personal"></glsf-profile>
+      <glsf-education [educations]="profile.education"></glsf-education>
+      <glsf-experience [experiences]="profile.experience"></glsf-experience>
+      <glsf-skill [skills]="profile.skill"></glsf-skill>
+      <glsf-lang [langs]="profile.language"></glsf-lang>
       <glsf-social></glsf-social>
     </div>
   </div>

@@ -3,6 +3,7 @@ import { Component, OnInit, inject } from '@angular/core';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 import { Observable } from 'rxjs';
 import { Profile } from './models/profile';
+import { environment } from '@env';
 
 @Component({
   selector: 'glsf-root',
@@ -12,15 +13,18 @@ import { Profile } from './models/profile';
 export class AppComponent implements OnInit {
   http = inject(HttpClient);
 
-  profile$!: Observable<Profile>;
-
   isPhonePortrait = false;
 
-  constructor(private responsive: BreakpointObserver) {
-    this.profile$ = this.http.get<Profile>('./../assets/data/profile.json');
-  }
+  profile$!: Observable<Profile>;
+
+  isUserLangPT = navigator.language === 'pt-BR';
+
+  constructor(private responsive: BreakpointObserver) {}
 
   ngOnInit() {
+    this.profile$ = this.http.get<Profile>(
+      this.isUserLangPT ? environment.ptUrl : environment.enUrl
+    );
     this.responsive.observe(Breakpoints.HandsetPortrait).subscribe((result) => {
       this.isPhonePortrait = false;
 
