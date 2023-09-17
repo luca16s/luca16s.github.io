@@ -1,34 +1,18 @@
-<div [ngClass]="{'is-phone-portrait': isPhonePortrait, 'is-web-portrait': !isPhonePortrait}" class="main-container">
+<div class="main-container">
   <div class="space">
 
   </div>
   <div class="center">
     <div class="header">
-      <app-header [personal]="(profile$ | async)!.personal"></app-header>
+      <glsf-header [personal]="(profile$ | async)!.personal"></glsf-header>
     </div>
     <div class="content">
-      <div class="content-left">
-        <div class="components">
-          <app-profile></app-profile>
-        </div>
-        <div class="components">
-          <app-work-experience></app-work-experience>
-        </div>
-        <div class="components">
-          <app-education></app-education>
-        </div>
-      </div>
-      <div class="content-right">
-        <div class="components">
-          <app-skills></app-skills>
-        </div>
-        <div class="components">
-          <app-langs></app-langs>
-        </div>
-        <div class="components">
-          <app-social></app-social>
-        </div>
-      </div>
+      <glsf-profile [personal]="(profile$ | async)!.personal"></glsf-profile>
+      <glsf-education [educations]="(profile$ | async)!.education"></glsf-education>
+      <glsf-experience [experiences]="(profile$ | async)!.experience"></glsf-experience>
+      <glsf-skill [skills]="(profile$ | async)!.skill"></glsf-skill>
+      <glsf-lang [langs]="(profile$ | async)!.language"></glsf-lang>
+      <glsf-social></glsf-social>
     </div>
   </div>
   <div class="space">

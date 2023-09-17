@@ -1,15 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-social',
+  selector: 'glsf-social',
   templateUrl: './social.component.html',
-  styleUrls: ['./social.component.scss']
+  styleUrls: ['./social.component.scss'],
 })
 export class SocialComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

@@ -1,0 +1,21 @@
+.lang-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lang {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
+h2 {
+  margin-right: 4px !important;
+}
+
+.mat-mdc-slider {
+  margin: 12px !important;
+}

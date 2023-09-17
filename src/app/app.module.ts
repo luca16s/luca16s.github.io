@@ -19,10 +19,10 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { WorkExperienceComponent } from './components/work-experience/work-experience.component';
+import { WorkExperienceComponent } from './components/experience/work-experience.component';
 import { ProfileComponent } from './components/profile/profile.component';
-import { LangsComponent } from './components/langs/langs.component';
-import { SkillsComponent } from './components/skills/skills.component';
+import { LangsComponent } from './components/lang/lang.component';
+import { SkillComponent } from './components/skill/skill.component';
 import { EducationComponent } from './components/education/education.component';
 import { SocialComponent } from './components/social/social.component';
 
@@ -33,7 +33,7 @@ import { SocialComponent } from './components/social/social.component';
     WorkExperienceComponent,
     ProfileComponent,
     LangsComponent,
-    SkillsComponent,
+    SkillComponent,
     EducationComponent,
     SocialComponent,
   ],

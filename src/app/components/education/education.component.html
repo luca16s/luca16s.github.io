@@ -1,5 +1,5 @@
 <div class="container">
-  <mat-expansion-panel (opened)="panelOpenState = true" (closed)="panelOpenState = false">
+  <mat-expansion-panel>
     <mat-expansion-panel-header>
       <mat-panel-title>
         <h1>
@@ -7,42 +7,26 @@
         </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
-    <mat-expansion-panel
-    (opened)="panelOpenState = true"
-    (closed)="panelOpenState = false"
-    class="workList"
-    *ngFor="let education of educationList">
+    <mat-expansion-panel *ngFor="let education of educations">
       <mat-expansion-panel-header>
         <mat-panel-title>
           <span>
             <mat-icon>
               date_range
             </mat-icon>
-            {{ education.date_range }}
+            {{ education.start }} to {{ education.end }}
           </span>
         </mat-panel-title>
         <mat-panel-description>
           <span>
-            <mat-icon class="material-icons-outlined">
+            <mat-icon>
               location_on
             </mat-icon>
             {{ education.location }}
           </span>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <div *ngIf="education.college_website.length > 0; then withWebsite else withoutWebsite"></div>
-      <ng-template #withWebsite>
-        <h2>
-          {{ education.type }} - <a href="{{ education.college_website }}" target="_blank" >
-            {{ education.collegeName }}
-          </a>
-        </h2>
-      </ng-template>
-      <ng-template #withoutWebsite>
-        <h2>
-          {{ education.type }} - {{ education.college_website }}
-        </h2>
-      </ng-template>
+      <ng-container *ngTemplateOutlet="education.website ? withWebsite : withoutWebsite; context: { $implicit: education }"></ng-container>
       <h3>
         {{ education.course }}
       </h3>
@@ -50,3 +34,15 @@
     </mat-expansion-panel>
   </mat-expansion-panel>
 </div>
+<ng-template #withWebsite let-education>
+  <h2>
+    {{ education.type }} - <a href="{{ education.website }}" target="_blank">
+      {{ education.name }}
+    </a>
+  </h2>
+</ng-template>
+<ng-template #withoutWebsite let-education>
+  <h2>
+    {{ education.type }} - {{ education.website }}
+  </h2>
+</ng-template>

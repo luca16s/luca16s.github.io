@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import { Profile } from './models/profile';
 
 @Component({
-  selector: 'app-root',
+  selector: 'glsf-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })

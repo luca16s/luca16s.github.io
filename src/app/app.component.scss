@@ -1,44 +1,27 @@
-.is-phone-portrait {
-  .header {
-    display: flex;
-    flex-direction: column;
-  }
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
 
-.is-web-portrait {
-  .main-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-  }
+.center {
+  display: flex;
+  flex-direction: column;
+}
 
-  .center {
-    display: flex;
-    flex-direction: column;
-  }
+.header {
+  padding: 2rem 0rem;
+  background-color: #FFFFFF;
+  border: 5px solid #1A1A1A;
+  border-bottom: 5px solid #4BB5D4;
+}
 
-  .header {
-    padding: 2rem 0rem;
-    background-color: #FFFFFF;
-    border: 5px solid #1A1A1A;
-    border-bottom: 5px solid #4BB5D4;
-  }
-
-  .content {
-    display: flex;
-    padding: 2rem 0rem;
-    flex-direction: row;
-    background-color: #1A1A1A;
-    border: 5px solid #FFFFFF;
-    justify-content: space-around;
-    border-top: 5px solid #4BB5D4;
-  }
-
-  .content-left,
-  .content-right {
-    display: flex;
-    margin-left: 1rem;
-    margin-right: 1rem;
-    flex-direction: column;
-  }
+.content {
+  display: flex;
+  padding: 2rem 2rem;
+  flex-direction: column;
+  background-color: #1A1A1A;
+  border: 5px solid #FFFFFF;
+  justify-content: space-around;
+  border-top: 5px solid #4BB5D4;
 }

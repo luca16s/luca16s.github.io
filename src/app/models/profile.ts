@@ -1,10 +1,10 @@
 export interface Profile {
-  skills: Skills[];
+  skill: Skill[];
   social: Social[];
   personal: Personal;
   language: Language[];
   education: Education[];
-  workExperience: WorkExperience[];
+  experience: Experience[];
 }
 
 export interface Personal {
@@ -19,41 +19,41 @@ export interface Personal {
 export interface Education {
   end: number;
   type: string;
+  name: string;
   start: number;
+  state: string;
   course: string;
+  website: string;
   location: string;
-  collegeName: string;
   description: string;
-  collegeWebsite: string;
 }
 
 export interface Social {
-  name: string;
   url: string;
+  icon: string;
+  name: string;
 }
 
-export interface Language {
+export interface Progress {
   name: string;
-  level: string;
   progress: number;
+}
+
+export interface Language extends Progress {
+  level: string;
 }
 
 export interface Skill {
-  name: string;
-  progress: number;
-}
-
-export interface Skills {
-  skills: Skill[];
   category: string;
+  items: Progress[];
 }
 
-export interface WorkExperience {
-  start: string;
+export interface Experience {
   end: string;
+  start: string;
+  name: string;
+  website: string;
   location: string;
   position: string;
-  employerName: string;
-  jobDescription: string;
-  employerWebsite: string;
+  description: string;
 }

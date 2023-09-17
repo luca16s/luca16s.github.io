@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { By } from '@angular/platform-browser';
 import { DebugElement } from '@angular/core';
 
-import { LangsComponent } from './langs.component';
+import { LangsComponent } from './lang.component';
 
 describe('LangsComponent', () => {
   let component: LangsComponent;
@@ -11,9 +11,8 @@ describe('LangsComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ LangsComponent ]
-    })
-    .compileComponents();
+      declarations: [LangsComponent],
+    }).compileComponents();
   }));
 
   beforeEach(() => {

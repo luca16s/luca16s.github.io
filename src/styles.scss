@@ -7,9 +7,51 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-app-root {
+glsf-root {
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  font-size: 30px !important;
+  color: #27B5D2 !important;
+  font-weight: bold !important;
+  margin-top: 1.6vh !important;
+  text-decoration: solid !important;
+  text-transform: capitalize !important;
+}
+
+.mat-h1,
+.mat-headline-5,
+.mat-typography .mat-h1,
+.mat-typography .mat-headline-5,
+.mat-typography h1 {
+  margin: 0px !important;
+}
+
+.mat-h2,
+.mat-headline-5,
+.mat-typography .mat-h2,
+.mat-typography .mat-headline-5,
+.mat-typography h2 {
+  margin: 0px !important;
+}
+
+.mat-h3,
+.mat-headline-5,
+.mat-typography .mat-h3,
+.mat-typography .mat-headline-5,
+.mat-typography h3 {
+  margin: 0px !important;
+}
+
+.mdc-list-item {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+mat-expansion-panel {
+  background-color: #1A1A1A !important;
 }
 
 .mat-expansion-panel:not([class*=mat-elevation-z]) {

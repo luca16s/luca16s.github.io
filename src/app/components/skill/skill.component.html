@@ -1,0 +1,28 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1>
+        Skills
+      </h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-expansion-panel *ngFor="let skill of skills">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <span>
+          {{ skill.category }}
+        </span>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-list>
+      <mat-list-item class="skill-container" *ngFor="let item of skill.items">
+        <div class="skill">
+          <span>{{ item.name }}</span>
+          <mat-slider [disabled]="true" [max]="100">
+            <input matSliderThumb [(ngModel)]="item.progress" #slider aria-label="Skill level">
+          </mat-slider>
+        </div>
+      </mat-list-item>
+    </mat-list>
+  </mat-expansion-panel>
+</mat-expansion-panel>

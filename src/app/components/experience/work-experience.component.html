@@ -1,0 +1,47 @@
+<div class="container">
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h1>
+          Work Experience
+        </h1>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-expansion-panel class="workList" *ngFor="let experience of experiences">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          <span>
+            <mat-icon>
+              date_range
+            </mat-icon>
+            {{ experience.start | date:'MM/yyyy' }} to {{ (experience.end | date:'MM/yyyy') ?? (userLang ? 'Atualmente'
+            : 'Current') }}
+          </span>
+        </mat-panel-title>
+        <mat-panel-description>
+          <span>
+            <mat-icon class="material-icons-outlined">
+              location_on
+            </mat-icon>
+            {{ experience.location }}
+          </span>
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <ng-container
+        *ngTemplateOutlet="experience.website ? withWebsite : withoutWebsite; context: { $implicit: experience }"></ng-container>
+      {{ experience.description }}
+    </mat-expansion-panel>
+  </mat-expansion-panel>
+</div>
+<ng-template #withWebsite let-experience>
+  <h2>
+    {{ experience.position }} - <a href="{{ experience.website }}" target="_blank">
+      {{ experience.name }}
+    </a>
+  </h2>
+</ng-template>
+<ng-template #withoutWebsite let-experience>
+  <h2>
+    {{ experience.position }} - {{ experience.name }}
+  </h2>
+</ng-template>

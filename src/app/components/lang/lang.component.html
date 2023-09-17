@@ -1,0 +1,20 @@
+<mat-expansion-panel>
+  <mat-expansion-panel-header>
+    <mat-panel-title>
+      <h1>
+        Languages
+      </h1>
+    </mat-panel-title>
+  </mat-expansion-panel-header>
+  <mat-list>
+    <mat-list-item class="lang-container" *ngFor="let lang of langs">
+      <div class="lang">
+        <span>{{ lang.name}}</span>
+        <span>{{ lang.level }}</span>
+        <mat-slider [disabled]="true" [max]="100">
+          <input matSliderThumb [(ngModel)]="lang.progress" #slider aria-label="Idioma falado">
+        </mat-slider>
+      </div>
+    </mat-list-item>
+  </mat-list>
+</mat-expansion-panel>

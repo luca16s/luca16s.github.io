@@ -12,49 +12,33 @@ mat-icon {
   padding-right: 4px;
 }
 
-h1 {
-  font-size: 50px;
-  font-weight: bold;
-  text-decoration: solid;
-  text-transform: capitalize;
-}
-
 a {
   color: inherit;
 }
 
-.is-phone-portrait {
-  .contentContainer {
-    display: flex;
-    flex-direction: column;
-  }
+.main-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
 }
 
-.is-web-portrait {
-  .main-container {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-  }
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
 
-  .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.foto-container {
+  display: flex;
+  flex-direction: center;
+  justify-content: center;
+}
 
-  .foto-container {
-    display: flex;
-    flex-direction: center;
-    justify-content: center;
-  }
-
-  #foto {
-    width: 223px;
-    height: 223px;
-    border-radius: 50%;
-    background: url('../../../assets/img/me.jpg') center top;
-    background-size: cover;
-  }
+#foto {
+  width: 223px;
+  height: 223px;
+  border-radius: 50%;
+  background: url('../../../assets/img/me.jpg') center top;
+  background-size: cover;
 }
