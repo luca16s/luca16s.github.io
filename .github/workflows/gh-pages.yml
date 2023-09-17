@@ -19,8 +19,6 @@ jobs:
       run: npm run build
     - name: Deploy
       if: success()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: actions-js/push@gh-pages
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: dist/luca16s.github.io
-        enable_jekyll: true
