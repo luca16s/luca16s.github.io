@@ -4,10 +4,9 @@
       <h1>
         {{ personal.name }}
       </h1>
-      <br>
       <span>
         <mat-icon>
-          person
+          cake
         </mat-icon>
         {{ personal.birth | date:'dd/MM/yyyy' }}
       </span>
@@ -21,7 +20,7 @@
         <mat-icon>
           phone_iphone_outlined
         </mat-icon>
-        <a href="tel:+{{personal.phone}}">{{ personal.phone }}</a>
+        <a href="tel:+{{personal.phone}}">{{ personal.phone | glsfPhone }}</a>
       </span>
       <span>
         <mat-icon>

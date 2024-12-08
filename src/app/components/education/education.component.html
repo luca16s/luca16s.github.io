@@ -3,7 +3,7 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <h1>
-          Education
+          {{ isUserLangPT ? "Educação" : "Education" }}
         </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
@@ -26,7 +26,8 @@
           </span>
         </mat-panel-description>
       </mat-expansion-panel-header>
-      <ng-container *ngTemplateOutlet="education.website ? withWebsite : withoutWebsite; context: { $implicit: education }"></ng-container>
+      <ng-container
+        *ngTemplateOutlet="education.website ? withWebsite : withoutWebsite; context: { $implicit: education }"></ng-container>
       <h3>
         {{ education.course }}
       </h3>

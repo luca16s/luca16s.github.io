@@ -6,16 +6,9 @@
 }
 
 .lang {
+  gap: 8px;
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-}
-
-h2 {
-  margin-right: 4px !important;
-}
-
-.mat-mdc-slider {
-  margin: 12px !important;
+  justify-content: start;
 }

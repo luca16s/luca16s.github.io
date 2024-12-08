@@ -3,7 +3,7 @@
     <mat-expansion-panel-header>
       <mat-panel-title>
         <h1>
-          Work Experience
+          {{ isUserLangPT ? "Experiência de Trabalho" : "Work Experience" }}
         </h1>
       </mat-panel-title>
     </mat-expansion-panel-header>
@@ -14,7 +14,8 @@
             <mat-icon>
               date_range
             </mat-icon>
-            {{ experience.start | date:'MM/yyyy' }} to {{ (experience.end | date:'MM/yyyy') ?? (userLang ? 'Atualmente'
+            {{ experience.start | date:'MM/yyyy' }} to {{ (experience.end | date:'MM/yyyy') ?? (isUserLangPT ?
+            'Atualmente'
             : 'Current') }}
           </span>
         </mat-panel-title>

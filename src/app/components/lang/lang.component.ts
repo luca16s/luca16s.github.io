@@ -8,11 +8,13 @@ export interface Languages {
 }
 
 @Component({
-    selector: 'glsf-lang',
-    templateUrl: './lang.component.html',
-    styleUrls: ['./lang.component.scss'],
-    standalone: false
+  selector: 'glsf-lang',
+  templateUrl: './lang.component.html',
+  styleUrls: ['./lang.component.scss'],
+  standalone: false,
 })
 export class LangsComponent {
   @Input() langs: Language[] = [] as Language[];
+
+  isUserLangPT = navigator.language === 'pt-BR';
 }
