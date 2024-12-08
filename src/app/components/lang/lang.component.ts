@@ -8,9 +8,10 @@ export interface Languages {
 }
 
 @Component({
-  selector: 'glsf-lang',
-  templateUrl: './lang.component.html',
-  styleUrls: ['./lang.component.scss'],
+    selector: 'glsf-lang',
+    templateUrl: './lang.component.html',
+    styleUrls: ['./lang.component.scss'],
+    standalone: false
 })
 export class LangsComponent {
   @Input() langs: Language[] = [] as Language[];

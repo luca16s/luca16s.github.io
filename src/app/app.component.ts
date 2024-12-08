@@ -6,9 +6,10 @@ import { Profile } from '@models';
 import { environment } from '@env';
 
 @Component({
-  selector: 'glsf-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+    selector: 'glsf-root',
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss'],
+    standalone: false
 })
 export class AppComponent implements OnInit {
   http = inject(HttpClient);

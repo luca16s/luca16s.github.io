@@ -15,11 +15,12 @@
       "prefix": "glsf",
       "architect": {
         "build": {
-          "builder": "@angular-devkit/build-angular:browser",
+          "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "docs",
+            "outputPath": {
+              "base": "docs"
+            },
             "index": "src/index.html",
-            "main": "src/main.ts",
             "polyfills": ["zone.js"],
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
@@ -33,8 +34,8 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "serviceWorker": true,
-            "ngswConfigPath": "ngsw-config.json"
+            "serviceWorker": "ngsw-config.json",
+            "browser": "src/main.ts"
           },
           "configurations": {
             "production": {
@@ -53,9 +54,7 @@
               "outputHashing": "all"
             },
             "development": {
-              "buildOptimizer": false,
               "optimization": false,
-              "vendorChunk": true,
               "extractLicenses": false,
               "sourceMap": true,
               "namedChunks": true
@@ -67,10 +66,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "luca16s:build:production"
+              "buildTarget": "luca16s:build:production"
             },
             "development": {
-              "browserTarget": "luca16s:build:development"
+              "buildTarget": "luca16s:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -78,7 +77,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "luca16s:build"
+            "buildTarget": "luca16s:build"
           }
         },
         "test": {
