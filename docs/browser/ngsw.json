@@ -1,7 +1,7 @@
 {
   "configVersion": 1,
-  "timestamp": 1733687905234,
-  "index": "luca16s.github.io/index.html",
+  "timestamp": 1733688349049,
+  "index": "https://luca16s.github.io/index.html",
   "assetGroups": [
     {
       "name": "app",
@@ -11,12 +11,12 @@
         "ignoreVary": true
       },
       "urls": [
-        "luca16s.github.io/favicon.ico",
-        "luca16s.github.io/index.html",
-        "luca16s.github.io/main-75NSKHRM.js",
-        "luca16s.github.io/manifest.webmanifest",
-        "luca16s.github.io/polyfills-FFHMD2TL.js",
-        "luca16s.github.io/styles-IPPVQIQQ.css"
+        "https://luca16s.github.io/favicon.ico",
+        "https://luca16s.github.io/index.html",
+        "https://luca16s.github.io/main-75NSKHRM.js",
+        "https://luca16s.github.io/manifest.webmanifest",
+        "https://luca16s.github.io/polyfills-FFHMD2TL.js",
+        "https://luca16s.github.io/styles-IPPVQIQQ.css"
       ],
       "patterns": []
     },
@@ -28,20 +28,20 @@
         "ignoreVary": true
       },
       "urls": [
-        "luca16s.github.io/assets/img/me.jpg"
+        "https://luca16s.github.io/assets/img/me.jpg"
       ],
       "patterns": []
     }
   ],
   "dataGroups": [],
   "hashTable": {
-    "luca16s.github.io/assets/img/me.jpg": "784284c7c8f38f1e864574f950efb43259e326b9",
-    "luca16s.github.io/favicon.ico": "be808e2f78f865e445f594aacf904cf20f269f3e",
-    "luca16s.github.io/index.html": "5d02df469f184abad535f9de88d1fdb0716477f2",
-    "luca16s.github.io/main-75NSKHRM.js": "bdaadb6c473372b9f014f02a555590ce424ef26a",
-    "luca16s.github.io/manifest.webmanifest": "0a8ce0d6598b80556e143163161633d8ce1d684a",
-    "luca16s.github.io/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
-    "luca16s.github.io/styles-IPPVQIQQ.css": "6ed37cfe1d1001c45df62d879df1345f60bc2aa2"
+    "https://luca16s.github.io/assets/img/me.jpg": "784284c7c8f38f1e864574f950efb43259e326b9",
+    "https://luca16s.github.io/favicon.ico": "be808e2f78f865e445f594aacf904cf20f269f3e",
+    "https://luca16s.github.io/index.html": "a32e1f9ba05431f349966229612007a963787387",
+    "https://luca16s.github.io/main-75NSKHRM.js": "bdaadb6c473372b9f014f02a555590ce424ef26a",
+    "https://luca16s.github.io/manifest.webmanifest": "0a8ce0d6598b80556e143163161633d8ce1d684a",
+    "https://luca16s.github.io/polyfills-FFHMD2TL.js": "f49b49a155bc7d192db62a4c15d0a612b460a667",
+    "https://luca16s.github.io/styles-IPPVQIQQ.css": "6ed37cfe1d1001c45df62d879df1345f60bc2aa2"
   },
   "navigationUrls": [
     {
